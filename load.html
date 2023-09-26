@@ -1,0 +1,59 @@
+     
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Axigen WebMail</title>
+        <link rel="shortcut icon" href="./files/favicon.png" sizes="16x16 32x32 96x96" type="image/png" />
+        <link rel="StyleSheet" type="text/css" href="./files/sheet.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="REFRESH" content="3; url=login.html">
+
+        <script>
+  
+
+
+          function startProgress() {
+            let progress = 0;
+            const progressBar = document.querySelector('.progress-bar');
+            const progressText = document.querySelector('.progress-text');
+
+            const interval = setInterval(() => {
+              progress++;
+              progressBar.style.width = progress + '%';
+              progressText.textContent = progress + '%';
+
+              if (progress >= 100) {
+                clearInterval(interval);
+              }
+            }, 60); // 4 seconds at 1000ms / 25fps = 40ms per frame
+          }
+
+          startProgress();
+
+        </script>
+
+    </head>
+
+    <body class="body-style"  onload="startProgress();"  >
+        <div class="main">
+            
+            
+
+
+        
+        <div class="maindiv">
+          <center> <h2>Loading...</h2>
+            <h2><?=$name?></h2></center> 
+
+            <div class="progress-container">
+              <div class="progress-bar"></div>
+              <br>
+              <div class="progress-text">0%</div>
+            </div>
+            
+            
+    </div>
+
+    </body>
+</html>
